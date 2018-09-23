@@ -19,7 +19,7 @@ class Member < Scraped::JSON
   end
 
   field :name do
-    json[:MemberName]
+    json[:MemberName].split(', ').reverse.join(' ')
   end
 
   field :family_name do
